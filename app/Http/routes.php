@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login/{provider?}', 'SocialController@login');
+
+Route::get('profile1/{provider?}/callback', 'SocialController@login');
+
+Route::get('dash', function() {
+  return view('dash');
+});
+
+Route::get('logout', 'SocialController@logout');
