@@ -38,9 +38,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
-              <div><a href="login/facebook">FB Login</a></div>
-                <a href="login/google">Google Login</a>
+                <div class="title"><h2>{!!Auth::user()->name!!}</h2></div>
+                <div class="avatar"><img src="{!! Auth::user()->avatar!!}"/></div>
+                <div id="logout"><a href="{{url('logout/')}}">logout</a></div>
             </div>
         </div>
     </body>
